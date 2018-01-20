@@ -2,6 +2,7 @@
 
 package com.example.evgen.kedditbysteps
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.support.design.widget.Snackbar
@@ -60,7 +61,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun changeFragment(f: Fragment, cleanStack: Boolean = false) {
+    @SuppressLint("PrivateResource")
+    private fun changeFragment(f: Fragment, cleanStack: Boolean = false) {
         val ft = supportFragmentManager.beginTransaction()
         if (cleanStack) {
             clearBackStack()
@@ -72,7 +74,7 @@ class MainActivity : AppCompatActivity() {
         ft.commit()
     }
 
-    fun clearBackStack() {
+    private fun clearBackStack() {
         val manager = supportFragmentManager
         if (manager.backStackEntryCount > 0) {
             val first = manager.getBackStackEntryAt(0)
