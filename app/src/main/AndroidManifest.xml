@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -17,9 +17,18 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                <!-- <category android:name="android.intent.category.BROWSABLE" />-->
+                <!-- Accepts URIs that begin with "https://evgen.example.com/kedditbysteps” -->
+                <!-- <data
+                    android:scheme="https"
+                    android:host="evgen.example.com"
+                    android:pathPrefix="/kedditbysteps" />-->
+                <!-- Accepts URIs that begin with "example://gizmos”
+                <data android:scheme="example"
+                    android:host="kedditbysteps" />-->
             </intent-filter>
+
         </activity>
     </application>
 

@@ -37,7 +37,8 @@ class NewsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun getItemViewType(position: Int): Int {
-        return this.items.get(position).getViewType()
+        //return this.items.get(position).getViewType()
+        return this.items[position].getViewType()
     }
 
     fun addNews(news: List<RedditNewsItem>) {

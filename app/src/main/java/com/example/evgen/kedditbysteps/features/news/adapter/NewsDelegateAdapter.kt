@@ -30,8 +30,7 @@ class NewsDelegateAdapter : ViewTypeDelegateAdapter {
             img_thumbnail.loadImg(item.thumbnail)
             description.text = item.title
             author.text = item.author
-            val commentsText = context.resources.getString(R.string.comments)
-            comments.text = "${item.numComments} $commentsText"
+            comments.text = "${item.numComments} ${context.resources.getString(R.string.comments)}"
             time.text = item.created.getFriendlyTime()
         }
     }

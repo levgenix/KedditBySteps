@@ -3,7 +3,7 @@ package com.example.evgen.kedditbysteps.commons
 import android.support.v4.app.Fragment
 import rx.subscriptions.CompositeSubscription
 
-open class RxBaseFragment() : Fragment() {
+open class RxBaseFragment : Fragment() {
 
     protected var subscriptions = CompositeSubscription()
 

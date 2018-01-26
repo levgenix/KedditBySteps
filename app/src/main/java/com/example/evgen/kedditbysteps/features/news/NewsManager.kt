@@ -1,16 +1,12 @@
 package com.example.evgen.kedditbysteps.features.news
 
-import com.example.evgen.kedditbysteps.api.RestAPI
+import com.example.evgen.kedditbysteps.api.NewsAPI
+import com.example.evgen.kedditbysteps.api.NewsRestAPI
 import com.example.evgen.kedditbysteps.commons.RedditNews
 import com.example.evgen.kedditbysteps.commons.RedditNewsItem
 import rx.Observable
 
-/**
- * News Manager allows you to request more news from Reddit.
- *
- * @author juancho
- */
-class NewsManager(private val api: RestAPI = RestAPI()) {
+class NewsManager(private val api: NewsAPI = NewsRestAPI()) {
 
     /**
      *
